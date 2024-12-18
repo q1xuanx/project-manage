@@ -1,6 +1,5 @@
 package projects.manage.entities;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,9 +24,9 @@ public class Task {
     private LocalDateTime deadline;
     private int status;
     @ManyToOne
-    private User created;
+    private Users created;
     @OneToMany
-    private List<User> assignees;
+    private List<Users> assignees;
     @ManyToOne
     private Project idProject;
 }

@@ -17,7 +17,7 @@ public class Project {
     private String projectName;
     private String projectDescription;
     @ManyToOne
-    private User userCreate;
+    private Users userCreate;
     @OneToMany
-    private List<User> members;
+    private List<Users> members;
 }
