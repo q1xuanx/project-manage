@@ -42,3 +42,5 @@ Routing: Implement client-side routing using React Router to navigate between di
         This will help you stay motivated and avoid getting overwhelmed
     ````
 
+# Contact: 
+Feel free to commit your contributes, please fork and make a pull request 💌
