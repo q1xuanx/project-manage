@@ -17,7 +17,7 @@ import java.util.function.Function;
 
 @Component
 public class JwtService {
-    public static final String JWT_SECRET = "14022003";
+    public static final String JWT_SECRET = "f180c4f6ca20349aead2c164bd8c4ae230605c861288ee9c5b79a73d483ba1c5";
 
     public String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
