@@ -21,4 +21,7 @@ public class Users {
     private String fullName;
     private String email;
     private String phoneNumber;
+    private String roles;
+    // owner,member
+    // admin,owner,member...
 }
