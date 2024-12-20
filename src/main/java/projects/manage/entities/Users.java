@@ -1,10 +1,7 @@
 package projects.manage.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -21,4 +18,6 @@ public class Users {
     private String fullName;
     private String email;
     private String phoneNumber;
+    @Column(columnDefinition = "VARCHAR(255) DEFAULT 'member'")
+    private String roles;
 }
