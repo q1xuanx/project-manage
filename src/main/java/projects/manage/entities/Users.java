@@ -4,6 +4,8 @@ package projects.manage.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -20,4 +22,6 @@ public class Users {
     private String phoneNumber;
     @Column(columnDefinition = "VARCHAR(255) DEFAULT 'member'")
     private String roles;
+    private String tokenRest;
+    private LocalDateTime tokenDate;
 }
