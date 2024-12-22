@@ -25,6 +25,7 @@ public class UserController {
         return userService.register(registerRequest);
     }
     @GetMapping("/users/{idUser}")
+    @PreAuthorize("hasAnyAuthority('admin,member')")
     public ApiResponse getUser(@PathVariable int idUser){
         return userService.getUser(idUser);
     }
