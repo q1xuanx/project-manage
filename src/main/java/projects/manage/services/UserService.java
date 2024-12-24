@@ -63,6 +63,9 @@ public class UserService implements UserDetailsService {
         userRepository.save(user);
         return new ApiResponse(200, "User created", true, user);
     }
+    public Users getUserById(int id){
+        return userRepository.findById(id).orElse(null);
+    }
     public ApiResponse getUser(int userId) {
         Optional<Users> findUser = userRepository.findById(userId);
         if (findUser.isPresent()) {
