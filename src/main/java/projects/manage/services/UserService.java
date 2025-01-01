@@ -66,6 +66,13 @@ public class UserService implements UserDetailsService {
     public Users getUserById(int id){
         return userRepository.findById(id).orElse(null);
     }
+    public ApiResponse getIdUser(String email){
+        Users findUser = userRepository.findByEmail(email);
+        if (findUser == null) {
+            return new ApiResponse(404, "User not found", false, null);
+        }
+        return new ApiResponse(200, "User found", true, findUser.getIdUser());
+    }
     public ApiResponse getUser(int userId) {
         Optional<Users> findUser = userRepository.findById(userId);
         if (findUser.isPresent()) {
